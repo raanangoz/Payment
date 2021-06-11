@@ -27,13 +27,6 @@ namespace PaymentAPI.Controllers
             return await _context.PaymentDetails.ToListAsync();
         }
 
-        // GET: api/PaymentDetail
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<PaymentDetail>>> GetPaymentDetails2()
-        {
-            return await _context.PaymentDetails.ToListAsync();
-        }
-
         // GET: api/PaymentDetail/5
         [HttpGet("{id}")]
         public async Task<ActionResult<PaymentDetail>> GetPaymentDetail(int id)
