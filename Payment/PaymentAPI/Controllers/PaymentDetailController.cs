@@ -14,6 +14,7 @@ namespace PaymentAPI.Controllers
     public class PaymentDetailController : ControllerBase
     {
         private readonly PaymentDetailContext _context;
+        private int x = 7;
 
         public PaymentDetailController(PaymentDetailContext context)
         {
@@ -25,6 +26,11 @@ namespace PaymentAPI.Controllers
         public async Task<ActionResult<IEnumerable<PaymentDetail>>> GetPaymentDetails()
         {
             return await _context.PaymentDetails.ToListAsync();
+        }
+
+        public void RemovePayment()
+        {
+
         }
 
         // GET: api/PaymentDetail/5
