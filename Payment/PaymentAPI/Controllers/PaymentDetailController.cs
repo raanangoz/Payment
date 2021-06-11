@@ -21,7 +21,7 @@ namespace PaymentAPI.Controllers
         }
         
         // GET: api/PaymentDetail
-        [HttpGet]
+        [HttpGet("GetPaymentDetails")]
         public async Task<ActionResult<IEnumerable<PaymentDetail>>> GetPaymentDetails()
         {
             return await _context.PaymentDetails.ToListAsync();
